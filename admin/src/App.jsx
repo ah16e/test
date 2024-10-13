@@ -13,9 +13,9 @@ import TeacherList from './pages/Admin/TeacherList';
 
 export default function App() {
 
-  const { aToken } = useContext(AdminContext)
+  const { token } = useContext(AdminContext)
 
-  return aToken ?  (
+  return token ?  (
     <div className='bg-[#F8F9FD]'>
       <ToastContainer/>
         <Navbar/>
