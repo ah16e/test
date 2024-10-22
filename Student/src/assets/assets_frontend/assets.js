@@ -15,7 +15,6 @@ import info_icon from './info_icon.svg'
 import upload_icon from './upload_icon.png'
 import stripe_logo from './stripe_logo.png'
 import razorpay_logo from './razorpay_logo.png'
-import mamar from '/src/assets/mamar.png'
 import doc1 from './doc1.png'
 import doc2 from './doc2.png'
 import doc3 from './doc3.png'
@@ -37,6 +36,7 @@ import General_physician from './General_physician.svg'
 import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
 import Pediatricians from './Pediatricians.svg'
+
 
 export const assets = {
     appointment_img,
@@ -85,12 +85,12 @@ export const specialityData = [
     },
 ]
 
-export  const doctors = [
+export const doctors = [
     {
-        _id: 'manarId',
-        name: 'Teacher Manar',
-        image: mamar,
-        speciality: 'English',
+        _id: 'doc1',
+        name: 'Dr. Richard James',
+        image: doc1,
+        speciality: 'General physician',
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
@@ -102,8 +102,8 @@ export  const doctors = [
     },
     {
         _id: 'doc2',
-        name: 'Teacher Manar ',
-        image: mamar,
+        name: 'Teacher Ahmed ',
+        image: doc2,
         speciality: 'Gynecologist',
         degree: 'MBBS',
         experience: '3 Years',

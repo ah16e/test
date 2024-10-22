@@ -1,5 +1,5 @@
 import React from 'react'
-import header from "/src/assets/contact-header.jpg"
+import header from "/src/assets/assets_frontend/contact-header.jpg"
 import { MdOutlinePhone } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { NavLink } from 'react-router-dom';

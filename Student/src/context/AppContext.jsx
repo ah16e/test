@@ -1,50 +1,28 @@
-import { createContext, useEffect, useState } from "react";
-import { doctors} from "/src/assets/assets.js"
-import axios from "axios"
-import { toast } from "react-toastify";
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 export const AppContext = createContext();
 
+export const AppProvider = ({ children }) => {
+    const [teachers, setTeachers] = useState([]);
 
-const AppContextProvider = (props)=> {
-
-const currncySymbol = "$"
-const backendUrl = import.meta.env.VITE_BACKEND_URL
-const [teachers, setTeachers] = useState([])
-const [token, setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):false)
-
-
-
-    const getTeacherData = async ()=> { 
-        try {
-            
-            const {data} = await axios.get(backendUrl + '/api/teachers/list')
-            if (data.success) {
-                setTeachers(data.teachers)
+    useEffect(() => {
+        const fetchTeachers = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/teachers'); // Adjust the URL as necessary
+                setTeachers(response.data);
+            } catch (error) {
+                console.error(error);
             }
-            else{
-                toast.error(data.message)
-            }
-        } catch (error) {
-            toast.error(error.message)
-        }
-    }
+        };
 
-    const value = {
-        doctors,currncySymbol,token,setToken,backendUrl,getTeacherData
-    }
-
-    useEffect(()=> {
-        getTeacherData()
-    } , [])
+        fetchTeachers();
+    }, []);
 
     return (
-        <AppContext.Provider value={value}>
-            {props.children}
+        <AppContext.Provider value={{ teachers }}>
+            {children}
         </AppContext.Provider>
-    )
-
-}
-
-export default AppContextProvider
+    );
+};
