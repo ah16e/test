@@ -1,7 +1,7 @@
 import React from 'react';
-import gruop from "/src/assets/group_profiles.png"
-import arrow from "/src/assets/arrow_icon.svg"
-import test from "/src/assets/comp-video-bg.png"
+import gruop from "/src/assets/assets_frontend/group_profiles.png"
+import arrow from "/src/assets/assets_frontend/arrow_icon.svg"
+import test from "/src/assets/assets_frontend/comp-video-bg.png"
 export default function Header() {
   return (
     <div className='flex flex-col md:flex-row flex-wrap bg-primary rounded-lg px-6  md:px-10 lg:px-20'>

@@ -29,6 +29,7 @@ export default function TeacherList() {
                 <p className='text-neutral-800 text-lg font-medium'>
                   {item.name}
                 </p>
+                <p className='text-zinc-600 text-sm'>{item.email}</p>
                 <p className='text-zinc-600 text-sm'>
                   {item.bio ? item.bio : 'No bio available for this teacher.'}
                 </p>
@@ -40,6 +41,9 @@ export default function TeacherList() {
                 >
                   Watch Intro Video
                 </a>
+                <p className='text-zinc-600 text-sm'>
+                  Fees: {item.fees}
+                  </p>
               </div>
             </div>
           ))

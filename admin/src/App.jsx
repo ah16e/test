@@ -10,6 +10,7 @@ import Dashboard from './pages/Admin/Dashboard';
 import AllApontments from './pages/Admin/AllApontments';
 import AddTeacher from './pages/Admin/AddTeacher';
 import TeacherList from './pages/Admin/TeacherList';
+import TeacherAppointement from './pages/Teacher/TeacherAppointement';
 
 export default function App() {
 
@@ -26,7 +27,9 @@ export default function App() {
             <Route path='/admin-dashboard' element={<Dashboard/>}/>
             <Route path='/all-apontments' element={<AllApontments/>}/>
             <Route path='/add-teacher' element={<AddTeacher/>}/>
+            <Route path='/teacher-appointemnet' element={<TeacherAppointement/>}/>
             <Route path='/teacher-list' element={<TeacherList/>}/>
+            
          
           </Routes>
         </div>

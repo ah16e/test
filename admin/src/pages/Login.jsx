@@ -28,6 +28,19 @@ export default function Login() {
                 } else {
                     toast.error(data.message);
                 }
+            }else{
+
+                // Make login request
+                const { data } = await axios.post(`${backendUrl}/admin/loginTeacher`, { email, password });
+                if (data.success) {
+                    // Store the token in both state and localStorage
+                    setToken(data.token); 
+                    localStorage.setItem('token', data.token); // Store token in localStorage
+                    toast.success('Login successful');
+                    navigate('/teacher-appointemnet');
+                } else {
+                    toast.error(data.message);
+                }
             }
         } catch (error) {
             toast.error('Login failed. Please try again.');

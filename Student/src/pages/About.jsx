@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "/src/assets/about-img.png"
+import logo from "/src/assets/assets_frontend/about-img.png"
 export default function About() {
   return (
     <div>

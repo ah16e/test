@@ -1,5 +1,5 @@
 import React from 'react'
-import logo1 from "/src/assets/comp-video-bg.png"
+import logo1 from "/src/assets/assets_frontend/comp-video-bg.png"
 import { useNavigate } from 'react-router-dom'
 export default function Banner() {
 
