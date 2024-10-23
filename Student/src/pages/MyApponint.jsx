@@ -71,10 +71,14 @@ export default function MyAppointment() {
                 <div className='flex-1 text-sm text-zinc-600'>
                   <p className='text-neutral-800 font-medium'>{teacher?.name}</p>
                   <p>{teacher?.bio}</p>
-                  <p className='text-xs mt-1'>
-                    <span className='text-sm text-neutral-700 font-medium'>Date & Time: </span>
-                    {new Date(booking.startTime).toLocaleString()} - {new Date(booking.endTime).toLocaleString()}
-                  </p>
+                  <div className="mt-4">
+                <p className="text-sm text-gray-600">
+                  Date: {booking.slotDate.replace(/_/g, '/')}
+                </p>
+                <p className="text-sm text-gray-600">
+                  Time: {booking.slotTime}
+                </p>
+              </div>
                 </div>
                 <div></div>
                 <div className='flex flex-col gap-2 justify-end'>
